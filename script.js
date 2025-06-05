@@ -1,36 +1,44 @@
+const names = [
+  "Micro Man",
+  "Dope",
+  "Lego Spider Ninja",
+  "Eshkere Dope",
+  "Мистер Жопа Кенг",
+  "RYACH"
+];
 
-const typingElement = document.getElementById("typing");
-const nicknames = ["Micro Man", "Dope", "Lego Spider Ninja", "Eshkere Dope", "Мистер Жопа Кенг", "RYACH"];
-let index = 0;
-let textIndex = 0;
+let i = 0;
+let j = 0;
+let currentName = "";
 let isDeleting = false;
+const typingEl = document.getElementById("typing");
 
 function type() {
-  const current = nicknames[index];
-  typingElement.innerHTML = isDeleting
-    ? current.substring(0, textIndex) + "|"
-    : current.substring(0, textIndex + 1) + "|";
-
-  if (!isDeleting && textIndex < current.length) {
-    textIndex++;
-    setTimeout(type, 150);
-  } else if (isDeleting && textIndex > 0) {
-    textIndex--;
-    setTimeout(type, 100);
-  } else {
+  if (i < names.length) {
+    currentName = names[i];
     if (!isDeleting) {
-      isDeleting = true;
-      setTimeout(type, 1000);
-    } else {
-      isDeleting = false;
-      index++;
-      if (index >= nicknames.length) {
-        typingElement.innerHTML = "RYACH";
-        return;
+      typingEl.textContent = currentName.substring(0, j++);
+      if (j > currentName.length) {
+        if (currentName !== "RYACH") {
+          isDeleting = true;
+          setTimeout(type, 800);
+        } else {
+          return;
+        }
+      } else {
+        setTimeout(type, 100);
       }
-      setTimeout(type, 500);
+    } else {
+      typingEl.textContent = currentName.substring(0, j--);
+      if (j < 0) {
+        isDeleting = false;
+        i++;
+        setTimeout(type, 400);
+      } else {
+        setTimeout(type, 60);
+      }
     }
   }
 }
 
-type();
+document.addEventListener("DOMContentLoaded", type);

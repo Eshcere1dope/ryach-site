@@ -1,49 +1,41 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RYACH — Легенда Контента</title>
+  <title>RYACH</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="header">
-    <h1 class="logo">RYACH</h1>
-    <p class="slogan">Разносторонний. Я. Человек.</p>
-  </header>
-
-  <section class="intro">
-    <p id="typing"></p>
-  </section>
-
-  <section class="story">
-    <h2>История</h2>
-    <p>
-      Я родился на Сицилии в двадцать пятом году — нет, шутка.<br><br>
-      Меня зовут Ряч, и сейчас я вам расскажу свою историю.<br><br>
-      Я с детства был человеком, вовлечённым в YouTube: канал с летсплеями, палатки из подушек, смешная музыка и Minecraft. Далее — канал с лайфстайлом, карпаркинг, мадау два, brawl stars.<br><br>
-      В 8 классе я вдохновился анимацией, сделал трейлер проекта — и пропал. Потом был Micro Man и дубляж. Потом RYACH. Я — человек, который хочет попробовать всё.<br><br>
-      R — Разносторонний<br>Я — Я<br>Ч — Человек<br><br>
-      Под этим никнеймом я делаю посты, видео, редактирую, озвучиваю, сохраняю творчество здесь — не только в своей голове, но и в вашей.
-    </p>
-  </section>
-
-  <section class="media">
-    <h2>Медиа</h2>
-    <div class="media-block">
-      <video controls src="lego_spider_ninja.mp4"></video>
-      <a href="https://vt.tiktok.com/ZSkhF48SL/" target="_blank">ТикТок @Lego Spider Ninja</a>
-    </div>
-    <div class="media-block">
-      <iframe width="100%" height="315" src="https://www.youtube.com/embed/I6vsCmnlEYI" frameborder="0" allowfullscreen></iframe>
-      <a href="https://youtu.be/I6vsCmnlEYI" target="_blank">Мистер Жопа Кенг (канал до 5 класса)</a>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2025 RYACH — Всё только начинается.</p>
-  </footer>
-
+  <main class="container">
+    <section class="hero">
+      <h1><span class="typing" id="typing"></span></h1>
+      <p class="subtitle">Разносторонний. Я. Человек.</p>
+    </section>
+    <section class="about">
+      <p>
+        Меня зовут Ряч. Сейчас я вам расскажу свою историю.
+        Я с детства был вовлечён в YouTube: снимал летсплеи, делал палатки из подушек, монтировал анимации.
+        <br /><br />
+        Никнеймы: Micro Man, Dope, Lego Spider Ninja, Eshkere Dope, Мистер Жопа Кенг.
+        <br /><br />
+        В 2024 родился RYACH — мой главный проект. Я делаю всё: озвучка, дубляж, идеи, мемы, сторителлинг. И всё это сохраняется здесь.
+      </p>
+    </section>
+    <section class="media">
+      <div class="video">
+        <video src="lego.mp4" controls></video>
+        <p>Lego Spider Ninja (TikTok)</p>
+      </div>
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/I6vsCmnlEYI" frameborder="0" allowfullscreen></iframe>
+        <p>Мистер Жопа Кенг (YouTube)</p>
+      </div>
+    </section>
+    <footer>
+      <p>© RYACH 2025</p>
+    </footer>
+  </main>
   <script src="script.js"></script>
 </body>
 </html>

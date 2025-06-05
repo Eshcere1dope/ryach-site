@@ -1,66 +1,54 @@
-
-body {
+* {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #0f0f0f;
-  color: #eee;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #0e0e0e;
+  color: #f5f5f5;
+  font-family: 'Arial', sans-serif;
   line-height: 1.6;
 }
-
-header {
-  background-color: #1a0000;
-  padding: 20px;
-  text-align: center;
-  border-bottom: 2px solid #b30000;
-}
-
-.logo {
-  font-size: 3rem;
-  color: #b30000;
-  margin: 0;
-}
-
-.slogan {
-  font-size: 1.1rem;
-  color: #ccc;
-}
-
-.intro, .story, .media {
-  padding: 40px 20px;
+.container {
   max-width: 800px;
   margin: 0 auto;
+  padding: 2rem;
 }
-
-h2 {
-  color: #b30000;
-  border-bottom: 2px solid #b30000;
-  padding-bottom: 5px;
+.hero {
+  margin-bottom: 3rem;
 }
-
-.media-block {
-  background-color: #1a1a1a;
-  border: 1px solid #333;
+.typing {
+  font-size: 2.5rem;
+  color: #a12424;
+  font-weight: bold;
+  white-space: nowrap;
+}
+.subtitle {
+  color: #999;
+  margin-top: 0.5rem;
+}
+.about {
+  margin-bottom: 3rem;
+}
+.media {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+.media .video {
+  background: #1c1c1c;
   border-radius: 12px;
-  margin-top: 20px;
-  padding: 20px;
-  overflow: hidden;
+  padding: 1rem;
 }
-
-video, iframe {
-  border-radius: 12px;
+.media video,
+.media iframe {
   width: 100%;
-  max-height: 400px;
-  margin-bottom: 10px;
+  border-radius: 8px;
 }
-
-a {
-  color: #ff4d4d;
-  text-decoration: none;
-}
-
 footer {
   text-align: center;
-  padding: 20px;
-  color: #999;
   font-size: 0.9rem;
+  color: #666;
+  margin-top: 4rem;
 }
